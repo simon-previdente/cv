@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<title>Simon Prévidente</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="jquery-1.9.1.js"></script>
+	<script src="jquery-ui-1.10.3.custom.js"></script>
+	<script type="text/javascript">
+		$('document').ready(function(){
+			var navBar = $("#nav").offset();
+			$(window).scroll(function() {
+				if($(window).scrollTop() < navBar.top) {
+					$('#nav').removeClass('fixed-nav').addClass('static-nav');
+					$('#accueil').removeClass('fixed-nav');
+				} else {
+					$('#nav').removeClass('static-nav').addClass('fixed-nav');
+					$('#accueil').addClass('fixed-nav'); // Evite que le menu soit soudainement sûr le contenue de la page.
+				}
+			});
+		});
+	</script>
+	<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->  
+	<!--[if lte IE 8]>
+		<link rel="stylesheet" href="style_ie.css">
+		<![endif]-->
+	</head>
+	<body>
+
+		<!-- header -->
+
+		<div id="header">
+			<h1>Simon Prévidente</h1>
+		</div>
+
+		<!-- navBar -->
+
+		<div id="nav" class="static-nav">
+			<ul><li><a href="#header" class="nav-home" title="Accueil"><span class="title-unique">Accueil</span></a></li><li>
+				<a href="#portfolio" class="nav-portfolio" title="Mes travaux"><span class="title-unique">Mes travaux</span></a></li><li>
+				<a href="#a-propos-about" class="nav-about" title="A propos / About"><span class="title">A propos</span> <span class="subtitle">Mon parcours</span></a></li><li>
+				<a href="#contact" class="nav-contact" title="Contact"><span class="title">Contact</span> <span class="subtitle">Des questions ?</span></a></li>
+			</ul>
+			<div style="clear: both"></div>
+		</div>
+
+		<!-- accueil -->
+
+		<div class="conteneur" id="accueil">
+			<div class="contenue">
+				<h3>Bonjour et bienvenue mon site web</h3>
+				<p>Passionné par les <strong>nouvelles technologies</strong>, et plus particulièrement par le <strong>développement web</strong>,<br />je suis actuellement en <strong>première année de DUT Informatique</strong> à l'IUT de Blagnac.</p>
+				<p>Vous découvrez au cours de votre visiste mon parcours, mes expériences, mes loisirs, etc..</p>
+			</div>
+		</div>
+
+		<!-- portfolio -->
+
+		<div class="conteneur" id="portfolio">
+			<div class="contenue">
+				<h3>Mes travaux</h3>
+				<ul class="polaroids">
+					<li>
+						<a>
+							<img src="comingsoon.png">
+							<strong>Mon blog</strong>
+							<p>Retours d'expériences, etc...</p>
+						</a>
+					</li>
+					<li>
+						<a href="http://simon.previdente.free.fr/Crypto">
+							<img src="crypto.jpg">
+							<strong>Cryptoparty</strong>
+							<p>Organisation, présentation</p>
+						</a>
+					</li>
+					<li>
+						<a href="Ma_boite_personnelle.pdf">
+							<img src="boitePPP.jpg">
+							<strong>Ma boîte personnelle</strong>
+							<p>Son contenu, son histoire</p>
+						</a>
+					</li>
+					<li>
+						<a href="Mon_portrait_chinois.pdf">
+							<img src="photo.jpg">
+							<strong>Mon portrait chinois</strong>
+							<p>Petit exercice ludique</p>
+						</a>
+					</li>
+					<li>
+						<a href="Evenements_marquants.pdf">
+							<img src="PC.png">
+							<strong>Événements marquants</strong>
+							<p>Qui m'ont amenés jusqu'ici</p>
+						</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+
+		<!-- a propos -->
+
+		<div class="conteneur" id="a-propos-about">
+			<div class="contenue">
+				<h3>A Propos</h3>
+				<div class="competences">
+					<div class="competence">
+						<div class="competence-content">
+							<h4>Études et diplômes</h4>
+							<ul>
+								<li>2014 - 1ère année de DUT Informatique à l'IUT de Blagnac</li>
+								<li>2013 - Baccalauréat Sciences et Technologies de l'Industrie et du Développement Durable au Lycée Déodat de Séverac à Toulouse</li>
+								<li>2010 - Brevet des Collèges au Collège Maurice Bécanne à Toulouse</li>
+							</ul>
+						</div>
+					</div>
+					<div class="competence">
+						<div class="competence-content">
+							<h4>Domaines de compétences</h4>
+							<ul>
+								<li>Pratique régulière et avancée de développement Web (HTML5, CSS3, JavaScript, PHP5, SQL)</li>
+								<li>Maîtrise des systèmes d'exploitation Windows XP, Windows 7, Windows 8 et de la suite bureautique Microsoft Office (Word, Excel, Powerpoint)</li>
+								<li>Anglais technique parlé et écrit</li>
+							</ul>
+						</div>
+					</div>
+					<div class="competence">
+						<div class="competence-content">
+							<h4>Expérience professionnelle</h4>
+							<ul>
+								<li>Juin 2014 : Participation à <a href="http://sudweb.fr/2014/">Sud Web 2014</a></li>
+								<li>Avril 2014 : Intervention lors de d'une <a href="http://dascritch.net/post/2014/05/06/Apr%C3%A8s-la-Crypto-Party-d-Avril">Cryptoparty</a> organisé à Epitech Toulouse</li>
+								<li>Avril 2014 : Co-organisation d'une Cryptoparty à l'IUT de Blagnac</li>
+								<li>Août 2013 : Vacataire au Conseil Général de la Haute Garonne à Toulouse</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div style="text-align: center">Mon CV est disponible <a href="PREVIDENTE-CV.pdf">ici</a></div>
+			</div>
+		</div>
+
+		<!-- contact -->
+
+		<div class="conteneur" id="contact">
+			<div class="contenue">
+				<h3>Contact</h3>
+				<div class="contact-table">
+					<div class="contact-cell">
+						<div class="social-network">
+							<div class="social-network-content">
+								<p>
+									Si vous souhaitez me contacter, je reste à votre entière diposition. 
+									En effet, vous pouvez me contacter via le formulaire de contact ci-joint ou via ces réseaux sociaux :</p>
+									<ul>
+										<li><a href="https://www.linkedin.com/in/simprevidente" title="LinkedIn">LinkedIn</a></li>
+										<li><a href="https://plus.google.com/+SimonPr%C3%A9vidente" title="Google+" >Google+</a></li>
+										<li><a href="https://twitter.com/sim_previdente" title="Twitter">Twitter</a></li>
+									</ul>
+							</div>
+						</div>
+					</div>
+					<div class="contact-cell">
+						<!-- Formulaire inutile puisque PHP interdit. -->
+						<form>
+							<p>
+								<label for="contact-form-name">Nom</label>
+								<input type="text" placeholder="Nom" id="contact-form-name">
+							</p>
+							<p>
+								<label for="contact-form-email">Email</label>
+								<input type="email" placeholder="Email" id="contact-form-email">
+							</p>
+							<p>
+								<label for="contact-form-message">Message</label>
+								<textarea id="contact-form-message" placeholder="Message"></textarea>
+							</p>
+							<p style="text-align: center;">
+								<input type="button" value="Envoyer" id="contact-form-send">
+							</p>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</body>
+</html>
